@@ -3,9 +3,10 @@
 @import 'mixin';
 
 @each $name, $file, $weight, $style in 
-('Gotham', 'Gotham-Bold', 700, normal),
-('Gotham', 'Gotham-Medium', 500, normal),
-('Gotham', 'Gotham-Light', 400, normal),
+('Gotham', 'Montserrat-Bold', 700, normal),
+('Gotham', 'Montserrat-SemiBold', 600, normal),
+('Gotham', 'Montserrat-Medium', 500, normal),
+('Gotham', 'Montserrat-Regular', 400, normal),
 {
   @include font-face($name, $file, $weight, $style);
 }

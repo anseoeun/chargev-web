@@ -18,10 +18,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(value, name, index) in list" :key="index">
-        <td v-if="name == ''" colspan="4"></td>
+      <tr v-for="(value, name, index) in list" :key="value">
+        <td v-if="name.includes('title-')" colspan="4" class="title">{{ value }}</td>
         <template v-else>
-          <td>{{ index + 1 }}</td>
+          <td>{{ index + titleNum }}</td>
           <td>{{ value }}</td>
           <td><router-link :to="'/'+name">{{ '/'+name }}</router-link></td>
           <td></td>
@@ -40,15 +40,14 @@ export default {
   },
   data(){
     return {
+      titleNum: 0,
       list: {
-          //샘플
-          'sample': '샘플/',
-          '': '',          
-
           // 메인
-          'main': '메인',
+          'main': '메인',      
       }
     }
+  },
+  methods: {
   }
 }
 </script>
@@ -64,4 +63,5 @@ export default {
   .index a:link, #mwork a:visited {color:#009; text-decoration:none;}
   .index a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
   .index tr:hover td {background-color:#eee !important;}
+  .index .title {background-color:#eee !important;}
 </style>

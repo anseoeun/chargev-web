@@ -1,8 +1,9 @@
 <template>
-    <div :class="layoutClass">
+    <div class="wrap">
         <Header />
         <slot />
         <Footer />
+        <button class="btn-scroll"><span>SCROLL</span></button>
     </div>
 </template>
 
@@ -14,10 +15,5 @@ export default {
         Header,
         Footer
     },
-    computed: {
-      layoutClass(){
-        return this.$root.$route.meta.layoutClass ? this.$root.$route.meta.layoutClass : 'layout-default'
-      },
-    }, 
 }
 </script>

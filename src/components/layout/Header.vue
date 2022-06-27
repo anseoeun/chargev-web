@@ -1,28 +1,32 @@
 <template>
     <div class="header">
-        <div class="left">
-            <h1 class="logo"></h1>
-        </div>
-       <div class="right">
-           <div class="gnb-menu">
-               <ul>
-                   <li><router-link to="/">차지비</router-link></li>
-                   <li><router-link to="/">사업</router-link></li>
-                   <li><router-link to="/">공지</router-link></li>
-                   <li><router-link to="/">문의</router-link></li>
-                   <li><router-link to="/">충전기 설치신청</router-link></li>
-                   <li><router-link to="/">채용</router-link></li>
-                   <li><router-link to="/">로그인</router-link></li>
-               </ul>
+        <div class="inner-wrapper">
+            <div class="left">
+                <h1 class="logo"><router-link to="/"><Icon type="chargev"></Icon></router-link></h1>
+            </div>
+            <div class="right">
+               <div class="gnb-menu">
+                   <ul>
+                       <li><a href="#chargev" class="link-menu">차지비</a></li>
+                       <li><a href="#business" class="link-menu">사업</a></li>
+                       <li><a href="#notice" class="link-menu">공지</a></li>
+                       <li><a href="#request" class="link-menu">문의</a></li>
+                       <li><router-link to="/">충전기 설치신청</router-link></li>
+                       <li><router-link to="/">채용</router-link></li>
+                       <li class="c-green"><router-link to="/">로그인</router-link></li>
+                   </ul>
+               </div>
+               <a href="javascript:void(0);" class="btn-dwn mo-ver">앱 다운로드</a>
+               <button class="menu pc-ver"><span></span><span></span><span></span></button>
+               <button class="menu mo-ver"><span></span><span></span><span></span></button>
            </div>
-           <button class="menu"></button>
-       </div>
+        </div>
     </div>
 </template>
 <script>
 export default{
-  data(){
-      return { }
+  mounted(){
+    this.gnbMenu();
   }
 }
 </script>

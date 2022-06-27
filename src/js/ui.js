@@ -3,38 +3,44 @@ import $ from 'jquery'
 
 Vue.mixin({
     methods: {
-      checkIcon(e, arr, i){
-        e.stopPropagation();
-        e.preventDefault();
-        const el = e.currentTarget.querySelector('i')
-        if(el.classList.contains('on')){
-          if(Array.isArray(this[arr])) this.$set(this[arr], i, false)
-          else this[arr] = false
-        }else{
-          if(Array.isArray(this[arr]))  this.$set(this[arr], i, true)
-          else this[arr] = true
-        }
+      gnbMenu(){
+        $('.header .menu.mo-ver').on('click', function(){
+          if($('.header').hasClass('on-mo')){
+            $('.header').removeClass('on-mo');
+            $('body').attr('overflow', 'hidden');
+          }else{
+            $('.header').addClass('on-mo');
+            $('body').attr('overflow', '');
+          }
+        });
+        $('.header .menu.pc-ver').on('click', function(){
+          if($('.header').hasClass('on-pc')){
+            $('.header').removeClass('on-pc');
+          }else{
+            $('.header').addClass('on-pc');
+          }
+        });
+
+        $('.gnb-menu .link-menu').on('click', function(e){
+          e.preventDefault()
+    
+          const body = $("html, body");
+          let id = $(this).attr('href').split('#')[1]
+    
+          $('.header').removeClass('on')
+          if($(this).parents('li').length > 0){
+            $('[data-evt="tab-btns"] li').removeClass('on')
+            $(this).parents('li').addClass('on');
+          }else{
+            $('[data-evt="tab-btns"] a').removeClass('on');
+            $(this).addClass('on');
+          }
+    
+          setTimeout(function(){
+            if($('#'+id).length <= 0 ) return
+            body.stop().animate({scrollTop:$('#'+id).offset().top}, 500);
+          },100)
+        });        
       },
-      arrAllCheck(arr, length){
-        let num = length;
-        for(let i=0;i<=num;i++){
-          this.$set(this[arr], i, true);
-        }
-      },
-      fillZero(width, str){
-        return String(str).length >= width ? str : new Array(width - String(str).length + 1).join('0')+str;
-      },      
-      toggleSlide(e, target){
-        let $btn = $(e.currentTarget);
-        let $cont = $(target)
-        
-        if($cont.is(':hidden')){
-            $cont.slideDown();
-            $btn.addClass('on');
-        }else{
-            $cont.slideUp();
-            $btn.removeClass('on');
-        }
-      }
     }
   })

@@ -42,5 +42,20 @@ Vue.mixin({
           },100)
         });        
       },
+      scrollBtm(){
+        window.scrollTo(0, document.body.scrollHeight);
+      },
+      toggleSlide(e, target){
+        let $btn = $(e.currentTarget);
+        let $cont = $(target)
+        
+        if($cont.is(':hidden')){
+            $cont.slideDown();
+            $btn.addClass('on');
+        }else{
+            $cont.slideUp();
+            $btn.removeClass('on');
+        }
+      }      
     }
   })

@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <Header />
+        <HeaderMain />
         <slot />
         <Footer />
         <button class="btn-scroll" @click="scrollBtm"><span>SCROLL</span></button>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import Header from '@/components/layout/Header';
+import HeaderMain from '@/components/layout/HeaderMain';
 import Footer from '@/components/layout/Footer';
 export default {
     components: {
-        Header,
+        HeaderMain,
         Footer
     },
 }

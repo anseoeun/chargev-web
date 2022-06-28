@@ -9,7 +9,10 @@ const routes = [
 
 
   // 메인
-  { path: '/main', meta: {layout: 'Default', menu:'home' }, component: () => import('@/views/Main.vue')},
+  { path: '/main', meta: {layout: 'Main'}, component: () => import('@/views/Main.vue')},
+
+  //컬쳐
+  { path: '/culture', meta: {layout: 'Default' }, component: () => import('@/views/Culture.vue')},
 ]
 
 for(let i=0;i<routes.length;i++){

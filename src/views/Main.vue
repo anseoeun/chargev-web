@@ -20,8 +20,8 @@
     <!-- // main-visual -->
     <!-- section -->
     <div class="section">
-      <h1 class="title-type1">차지비</h1>
-      <h2 class="title-type2">전기차 충전서비스의 현재와 미래</h2>
+      <h2 class="title-type1">차지비</h2>
+      <h3 class="title-type2">전기차 충전서비스의 현재와 미래</h3>
       <div class="text-type1">
           국내 최초의 민간 전기차 충전서비스 CHARGEV는 (주)차지비에서 운영하는 전기차 충전서비스 사업의 브랜드입니다. 
           <br />전기차 운전자의 생활에 가장 밀착된 충전 인프라 네트워크를 통해 여러분의 새로운 경험화 함께 합니다.
@@ -29,7 +29,7 @@
           <br />차지비는 아래의 파트너사와 함께합니다.        
       </div>
 
-      <h2 class="title-type2">PARTNERS</h2>
+      <h3 class="title-type2">PARTNERS</h3>
       <ul class="partener-logos">
           <li class="logo-bmw"><img :src="require('@/assets/images/logos/logo-bmw.svg')" alt="bmw"/></li>
           <li class="logo-coupe"><img :src="require('@/assets/images/logos/logo-coupe.svg')" alt="coupe"/></li>
@@ -43,8 +43,8 @@
         <button class="btn-more" @click="layerPop.PopPartners = true">파트너십에 대해 알아보기<Icon type="arr-more" /></button>
       </div>
 
-      <h1 class="title-type1">미션과 비전</h1>
-      <h2 class="title-type2">더 푸른세상을 위한 연결</h2>   
+      <h2 class="title-type1">미션과 비전</h2>
+      <h3 class="title-type2">더 푸른세상을 위한 연결</h3>   
       <div class="text-type1">
         차지비는 충전소와 전기차 사용자간의 편리한 연결을 통해 변화하는 모빌리티 환경이 세상에 안착하도록 하고,
         <br />궁극적으로 녹색을 띈 세상을 위해 노력합니다.
@@ -53,8 +53,8 @@
     <!-- // section -->
     <!-- section -->
     <div class="section" id="business">
-      <h1 class="title-type1">사업</h1>
-      <h2 class="title-type2">B2B 솔루션과 B2C 홈충전기 설치 및 충전소 운영</h2>
+      <h2 class="title-type1">사업</h2>
+      <h3 class="title-type2">B2B 솔루션과 B2C 홈충전기 설치 및 충전소 운영</h3>
       <div class="text-type1">
           ChargEV는 기업 및 단체를 대상으로 한 B2B 충전 솔루션과
           <br />개인 고객을 대상으로 B2C 홈충전기 설치 사업을 진행하고 있습니다.
@@ -162,7 +162,7 @@
     <!-- // section -->
     <!-- section -->
     <div class="section" id="notice">
-      <h1 class="title-type1">공지</h1>
+      <h2 class="title-type1">공지</h2>
       <div class="noti-list">
         <Carousel :data ="notiList" :options="notiOpt">
           <template slot-scope="props">
@@ -179,7 +179,7 @@
     <!-- // section -->
     <!-- section -->
     <div class="section" id="request">
-      <h1 class="title-type1">문의</h1>
+      <h2 class="title-type1">문의</h2>
       <div class="contract-wrap">
         <div class="img">
           <img :src="require('@/assets/images/bg-contract.jpg')" alt="" class="pc-ver" />
@@ -234,6 +234,13 @@ export default {
     PopB2bSolution,
     PopStationOperation,
     PopPlatform
+  },
+  mounted(){
+    if(this.$route.query.pos){
+      setTimeout(()=>{
+        document.querySelector('.gnb-'+this.$route.query.pos).click();
+      }, 300)
+    }
   },
   data(){
     return{

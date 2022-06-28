@@ -7,14 +7,10 @@
             <div class="right">
                <div class="gnb-menu">
                    <ul>
-                       <!-- <li><a href="#chargev" class="link-menu">차지비</a></li> -->
-                       <li><router-link :to="{ path:'/main', query: { pos: 'chargev' }}" class="gnb-chargev">차지비</router-link></li>
-                       <!-- <li><a href="#business" class="link-menu">사업</a></li> -->
-                       <li><router-link :to="{ path:'/main', query: { pos: 'business' }}" class="gnb-business">사업</router-link></li>
-                       <!-- <li><a href="#notice" class="link-menu">공지</a></li> -->
-                       <li><router-link :to="{ path:'/main', query: { pos: 'notice' }}" class="gnb-notice">공지</router-link></li>
-                       <!-- <li><a href="#request" class="link-menu">문의</a></li> -->
-                       <li><router-link :to="{ path:'/main', query: { pos: 'request' }}" class="gnb-request">문의</router-link></li>
+                       <li><a href="#chargev" class="link-menu gnb-chargev">차지비</a></li>
+                       <li><a href="#business" class="link-menu gnb-business">사업</a></li>
+                       <li><a href="#notice" class="link-menu gnb-notice">공지</a></li>
+                       <li><a href="#request" class="link-menu gnb-request">문의</a></li>
                        <li><router-link to="/">충전기 설치신청</router-link></li>
                        <li><router-link to="/culture">채용</router-link></li>
                        <li class="c-green"><router-link to="/">로그인</router-link></li>

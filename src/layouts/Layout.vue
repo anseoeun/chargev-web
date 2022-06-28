@@ -6,10 +6,11 @@
 
 <script>
 import Default from './Default';
-
+import Main from './Main';
 export default {
     components: {
         Default,
+        Main
     },
     props: {
         layout:{

@@ -56,6 +56,18 @@ Vue.mixin({
             $cont.slideUp();
             $btn.removeClass('on');
         }
-      }      
+      },
+      checkIcon(e, arr, i){
+        e.stopPropagation();
+        e.preventDefault();
+        const el = e.currentTarget.querySelector('i')
+        if(el.classList.contains('on')){
+          if(Array.isArray(this[arr])) this.$set(this[arr], i, false)
+          else this[arr] = false
+        }else{
+          if(Array.isArray(this[arr]))  this.$set(this[arr], i, true)
+          else this[arr] = true
+        }
+      },      
     }
   })

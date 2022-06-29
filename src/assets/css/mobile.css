@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media all and (max-width:1023px){
+@media screen and (max-width:1023px){
   .inner-wrapper{width: auto !important;}
   .wrap{overflow:hidden;}
   .wrap .btn-scroll{display:none;}
@@ -63,6 +63,8 @@
   .text-type2{font-size:1.6rem;}
   .text-type2 + .btn-more-wrap{margin-top:3.2rem;}
   .text-type3{font-size:1.4rem;}
+
+  i[class*=i-] svg{width: 100%; height: 100%;}
 
   .btn-more-wrap{text-align:center;}
   .btn-more{padding:0.5rem 0;;font-size:1.4rem;}

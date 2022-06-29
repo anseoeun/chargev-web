@@ -7,10 +7,12 @@
 <script>
 import Default from './Default';
 import Main from './Main';
+import None from './None';
 export default {
     components: {
         Default,
-        Main
+        Main,
+        None
     },
     props: {
         layout:{

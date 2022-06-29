@@ -7,11 +7,11 @@ const routes = [
   // 퍼블리싱 인덱스, 샘플
   { path: '/', meta: { layout: 'None' }, component: () => import('@/views/Home.vue')  },
 
-
+  // 로그인
+  { path: '/login', meta: {layout: 'Main'}, component: () => import('@/views/Login.vue')},
   // 메인
   { path: '/main', meta: {layout: 'Main'}, component: () => import('@/views/Main.vue')},
-
-  //컬쳐
+  // 채용
   { path: '/culture', meta: {layout: 'Default' }, component: () => import('@/views/Culture.vue')},
 ]
 

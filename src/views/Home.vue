@@ -42,8 +42,12 @@ export default {
     return {
       titleNum: 0,
       list: {
+          // 로그인
+          'login': '로그인',
           // 메인
-          'main': '메인',      
+          'main': '메인',
+          // 채용
+          'culture': '채용',
       }
     }
   },

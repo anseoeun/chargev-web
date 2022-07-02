@@ -156,7 +156,7 @@
 
       <div class="text-type2">자세한 내용은 회사소개서를 통해 확인 가능합니다.</div>
       <div class="btn-more-wrap">
-        <router-link to="/" class="btn-more">회사 소개서 다운로드<Icon type="arr-more" /></router-link>
+        <a href="/" class="btn-more">회사 소개서 다운로드<Icon type="arr-more" /></a>
       </div>      
     </div>
     <!-- // section -->

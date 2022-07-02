@@ -48,6 +48,14 @@ export default {
           'main': '메인',
           // 채용
           'culture': '채용',
+          // 이용약관
+          'terms': '이용약관',
+          // 개인정보
+          'privicy': '개인정보',
+          // 공고
+          'disclosure': '공고',
+          // 충전기 설치신청
+          'charger-apply': '충전기 설치신청',
       }
     }
   },

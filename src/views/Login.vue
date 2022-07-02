@@ -112,6 +112,11 @@
                         <span class="txt">전체동의</span>
                       </button>
                   </div>
+                  <div class="right">
+                    <button class="btn-link">
+                      <Icon type="delete" />
+                    </button>
+                  </div>
                 </div>
                 <div v-for="(item, index) in ruleList" :key="index" class="row">
                   <div class="check">
@@ -121,7 +126,7 @@
                       </button>
                   </div>
                   <div class="right">
-                    <button class="bth-link">
+                    <button class="btn-link" @click="layerPop.PopRules=true;ruleType=item.ruleType">
                       <Icon type="arr-right2" />
                     </button>
                   </div>
@@ -178,9 +183,10 @@
                           <Input type="text" v-model="form.name" placeholder="사업자명" />
                       </div>
                   </div>
-                  <div class="row">
+                  <div class="row inp-file">
+                      <input type="file" @change="handleFileChange($event, 'file')" />
                       <div class="input auto">
-                          <Input type="text" v-model="form.password" placeholder="사업자등록증" />
+                          <Input type="text" v-model="form.file" placeholder="사업자등록증" />
                       </div>
 											<div class="right">
 												<button class="btn">등록하기</button>
@@ -251,14 +257,16 @@
       </div>
     </div>
     <div class="line-bar"></div>
+
+    <PopRules :visible="layerPop.PopRules" :ruleType="ruleType" @close="layerPop.PopRules = false" />
   </div>
 </template>
 
 <script>
-
+import PopRules from '@/views/PopRules'
 export default {
   components: {
-
+    PopRules,
   },
 
   data(){
@@ -266,7 +274,7 @@ export default {
       prevStatus: '',
       status: 'login',
       form:{
-
+        file: ''
       },
       memType: 'normal',
 
@@ -274,25 +282,30 @@ export default {
       ruleList: [
         {
           tit: '서비스 이용약관 [필수]',
-          link: '/'
+          ruleType: 'terms'
         },
         {
           tit: '개인정보처리방침 [필수]',
-          link: '/'
+          ruleType: 'privicy'
         },
         {
           tit: '위치기반서비스 이용약관 [필수]',
-          link: '/'
+          ruleType: ''
         },
         {
           tit: '휴대폰본인확인서비스 [필수]',
-          link: '/'
+          ruleType: ''
         },
         {
           tit: '마케팅 이용 동의 [선택]',
-          link: '/'
+          ruleType: ''
         },
       ],      
+
+      ruleType: 'terms',
+      layerPop: {
+        PopRules: false,
+      }      
     }
   },
   watch:{
@@ -308,6 +321,9 @@ export default {
         this.$set(this.ruleChecked, i, check);
       }
     },
+    handleFileChange(e, val){
+      this['form'][val] = e.target.value
+    }
   }
 }
 </script>

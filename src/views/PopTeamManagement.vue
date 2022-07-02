@@ -1,10 +1,10 @@
 <template>
-    <LayerFullPopup :visible="visible" @close="$emit('close');" class="pop-team" >
+    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-team" >
       <template slot="content">
           <h2 class="layer-title">MANAGEMENT SUPPORT DEP.</h2>
           <TeamManagement />
       </template>
-    </LayerFullPopup>
+    </LayerPopup>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <LayerFullPopup :visible="visible" @close="$emit('close');" class="pop-partners" >
+    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-partners" >
       <template slot="content">
           <h2 class="layer-title">PARTNERS</h2>
           <div class="layer-title-sub"><em>9개 완성차 브랜드</em>와의 계약 기반 파트너십 및 지속성 기반의 <em>장기 파트너십</em> 보유</div>
@@ -8,7 +8,7 @@
             <br />완성차 제작사·정부·지자체 등과 다양한 프로젝트를 수행해왔습니다.
           </div>
       </template>
-    </LayerFullPopup>
+    </LayerPopup>
 </template>
 
 <script>

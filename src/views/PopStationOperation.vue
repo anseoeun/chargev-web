@@ -1,5 +1,5 @@
 <template>
-    <LayerFullPopup :visible="visible" @close="$emit('close');" class="pop-station-operation" >
+    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-station-operation" >
       <template slot="content">
           <h2 class="layer-title">STATION OPERATION</h2>
           <div class="text-type3">
@@ -28,7 +28,7 @@
           <div class="operation-process-content">
             내용
           </div>
-          <div class="operation-process-step">
+          <div class="process-step">
             <ol>
               <li v-for="(item, index) in processStepList" :key="index">
                 <Icon v-if="index != 0" type="arr-right" />
@@ -45,7 +45,7 @@
             <router-link to="/" class="btn-more">CONTACT<Icon type="arr-more" /></router-link>
           </div>          
       </template>
-    </LayerFullPopup>
+    </LayerPopup>
 </template>
 
 <script>

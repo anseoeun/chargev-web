@@ -8,11 +8,19 @@ const routes = [
   { path: '/', meta: { layout: 'None' }, component: () => import('@/views/Home.vue')  },
 
   // 로그인
-  { path: '/login', meta: {layout: 'Main'}, component: () => import('@/views/Login.vue')},
+  { path: '/login', meta: {layout: 'Default'}, component: () => import('@/views/Login.vue')},
   // 메인
   { path: '/main', meta: {layout: 'Main'}, component: () => import('@/views/Main.vue')},
   // 채용
   { path: '/culture', meta: {layout: 'Default' }, component: () => import('@/views/Culture.vue')},
+  // 이용약관
+  { path: '/terms', meta: {layout: 'Default' }, component: () => import('@/views/Terms.vue')},
+  // 개인정보
+  { path: '/privicy', meta: {layout: 'Default' }, component: () => import('@/views/Privicy.vue')},
+  // 공고
+  { path: '/disclosure', meta: {layout: 'Default' }, component: () => import('@/views/Disclosure.vue')},
+  // 충전기 설치신청
+  { path: '/charger-apply', meta: {layout: 'Default' }, component: () => import('@/views/ChargerApply.vue')},
 ]
 
 for(let i=0;i<routes.length;i++){

@@ -1,5 +1,5 @@
 <template>
-    <LayerFullPopup :visible="visible" @close="$emit('close');" class="pop-station-operation" >
+    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-station-operation" >
       <template slot="content">
           <h2 class="layer-title">PLATFORM</h2>
           <div class="text-type3">
@@ -27,7 +27,7 @@
             <router-link to="/" class="btn-more">CONTACT<Icon type="arr-more" /></router-link>
           </div>          
       </template>
-    </LayerFullPopup>
+    </LayerPopup>
 </template>
 
 <script>

@@ -9,6 +9,7 @@
    <i v-else-if="type === 'layer-page-close'" :class="cls"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M35 3L3 35M3 3L35 35" stroke="white" stroke-width="6"/> </svg> </i>
    <i v-else-if="type === 'layer-page-close-m'" :class="cls"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M24.9995 0.999512L0.999512 24.9995M0.999512 0.999512L24.9995 24.9995" stroke="white" stroke-width="2"/> </svg> </i>
    <i v-else-if="type === 'plus'" :class="cls"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M16 8H8M0 8H8M8 8V0M8 8V16" stroke="white" stroke-width="4"/> </svg> </i>
+   <i v-else-if="type === 'delete'" :class="cls"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M15 1L1 15M1 1L15 15" stroke="white" stroke-width="2"/> </svg> </i>
   
 </template>
 <script>

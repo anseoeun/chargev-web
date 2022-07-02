@@ -1,5 +1,5 @@
 <template>
-    <LayerFullPopup :visible="visible" @close="$emit('close');" class="pop-b2b-solution" >
+    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-b2b-solution" >
       <template slot="content">
           <h2 class="layer-title">B2B SOLUTION</h2>
           <div class="layer-title-sub"><em>고객 서비스 연계</em>와 <em>충전기 운영관리</em>를 위해 <em>충전기 구축과 운영이 반드시 함께 고려</em>되어야합니다.</div>
@@ -20,7 +20,7 @@
             <router-link to="/" class="btn-more">CONTACT<Icon type="arr-more" /></router-link>
           </div>
       </template>
-    </LayerFullPopup>
+    </LayerPopup>
 </template>
 
 <script>

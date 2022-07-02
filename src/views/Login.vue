@@ -80,12 +80,19 @@
               <div class="login-txt">
                 차지비 일반회원 가입은
                 <br />모바일앱을 통해 가능합니다.
-                <br />QR을 확인해 주세요.
+                <div class="pc-ver"><br />QR을 확인해 주세요.</div>
+                <div class="mo-ver">
+                  <br />아래의 버튼을 누르면 모바일 앱 다운로드
+                  <br />페이지로 이동합니다.
+                </div>
               </div>
             </div>
             <div class="right">
-              <div class="qr-wrap">
+              <div class="qr-wrap pc-ver">
                 <div class="qr"></div>
+              </div>
+              <div class="btn-down mo-ver">
+                <button class="btn">차지비 모바일 앱 다운로드</button>
               </div>
             </div>
           </template>

@@ -158,6 +158,9 @@ i[class*=i-] .svg-prevent {position: absolute; top: 0; left: 0; z-index: 1; widt
 .form-box .row .right { margin-left: 56px; }
 .form-box .btn { display: inline-block; padding: 0 8px; line-height: 46px; height: 48px; font-size: 18px; border-radius: 8px; background: #2A2B2C; }
 
+.login-wrap .form-box input[type=text],
+.login-wrap .form-box input[type=password]{font-size:18px;}
+
 /* ========================================
   contents
 =========================================== */
@@ -172,7 +175,7 @@ i[class*=i-] .svg-prevent {position: absolute; top: 0; left: 0; z-index: 1; widt
 .login-wrap{padding-top:324px;padding-bottom:280px;background:url('~@/assets/images/bg-login.jpg') no-repeat 50% 50%;background-size:cover;}
 .login-wrap .inner-wrapper{width:1408px;margin:0 auto;}
 .login-wrap .btn-back{margin-bottom:40px;}
-.login-wrap .login-content{display:flex;justify-content: space-between;font-size: 18px; align-items: center;}
+.login-wrap .login-content{display:flex;justify-content: space-between; align-items: center;}
 .login-wrap .login-content > .right{width:496px;}
 .login-wrap .login-menu ul li button{width: 496px; height: 176px;font-weight:600;font-size: 36px;background: #2A2B2C; border-radius: 4px;}
 .login-wrap .login-menu ul li ~ li{margin-top:36px;}

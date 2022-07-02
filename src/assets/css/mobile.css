@@ -71,9 +71,19 @@
   .btn-more i{margin-left:0.4rem;}
   .btn-more i svg{width:1.2rem;height:1.2rem;}
 
-  .form-box .row ~ .row{margin-top:1.6rem;}
+  
+.btn-back{padding:0;font-size: 1.4rem;}
+.btn-back i{margin-right:0.4rem;}
+.btn-back i svg{width:1.2rem;height:1.2rem;}
 
+.form-box .row ~ .row{margin-top:1.6rem;}
+.form-box .row .right { margin-left:0.8rem; }
+.form-box .btn { padding: 0 1rem; line-height: 3rem; height: 3.2rem; font-size: 1.2rem; border-radius: 0.4rem;}
 
+.login-wrap .form-box .row ~ .row{margin-top:2.4rem;}
+.login-wrap .form-box input[type=text],
+.login-wrap .form-box input[type=password],
+.login-wrap .form-box input[type=number]{font-size:1.2rem;}
 
 /* ========================================
   contents
@@ -84,6 +94,31 @@
   .section:first-child .title-type1{padding-top:6.4rem;}
   .section::after{width:5.8rem;height:0.2rem;margin-top:3.2rem;}
 
+  .line-bar{display:none;}
+
+  .login-wrap{padding:5.6rem 2.4rem;background:none;}
+  .login-wrap .inner-wrapper{width:100%;}
+  .login-wrap .btn-back{margin-bottom:2.5rem;}
+  .login-wrap .login-content{display:block;}
+  .login-wrap .login-content > .right{width:auto;margin-top:6.4rem;}
+  .login-wrap .login-menu ul{display:flex;}
+  .login-wrap .login-menu ul li{flex:1;}
+  .login-wrap .login-menu ul li button{width: 100%; height: 3.5rem;line-height:3.6rem;font-size:1.4rem;background: #2A2B2C; border-radius: 0.4rem;}
+  .login-wrap .login-menu ul li ~ li{margin-top:0;margin-left:1.6rem;}
+  .login-wrap .join-guide-txt{font-size:1.2rem;}
+  .login-wrap .login-txt{margin-top:6.4rem;font-weight: 700; font-size: 1.4rem;width:auto;text-align:center;}
+    /* .login-wrap .qr-wrap{display:flex;flex-direction: column;justify-content:center;align-items:center;width:400px;height:392px;}
+  .login-wrap .qr-wrap .qr{width:240px;height:240px;background:#C4C4C4;} */
+  .login-wrap .btn-more-wrap{text-align:left;margin-top:2.4rem;}
+  .login-wrap .grid-list-menu + .btn-more-wrap{margin-top:3rem;}
+  
+  /* grid-list-menu */
+  .grid-list-menu {font-size:1.4rem;}
+  .grid-list-menu > .row ~ .row { margin-top: 3.6rem; }
+  .grid-list-menu > .row .check .txt { margin-left:1.3rem; }
+  .grid-list-menu > .row .check svg{width:1.3rem;height:1.1rem;}
+  .grid-list-menu > .row .i-arr-right2 svg{width:0.68rem;height:1.6rem;}
+  
   .partener-logos{margin:2.4rem 0;}
   .partener-logos li{height:auto;padding:0 1rem;}
   .partener-logos li.logo-bmw img{width:2.1rem;height:2.1rem;}

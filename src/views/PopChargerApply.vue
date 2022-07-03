@@ -18,15 +18,24 @@
             <div class="menu-list">
               <ul>
                   <li v-for="(item, index) in homeChargerList" :key="index">
-                    <button v-if="item.menu ==='별도 프로모션 없음'" @click="status='apply-form'">{{ item.menu }}</button>
+                    <button v-if="item.menu ==='별도 프로모션 없음'" @click="status='home-charger-place'">{{ item.menu }}</button>
                     <button v-else @click="status='qr'">{{ item.menu }}</button>
                   </li>
               </ul>
             </div>
           </template>
-          <!-- 공용 충전기 -->
+          <!-- 홈 충전기 설치장소 -->
+          <template v-if="status === 'home-charger-place'">
+            <div class="layer-title-sub">설치 장소를 선택해주세요.</div>
+            <div class="menu-list">
+              <ul>
+                <li v-for="(item, index) in homeChargerPlaceList" :key="index"><button @click="status='apply-form'">{{ item.menu }}</button></li>
+              </ul>
+            </div>
+          </template>
+          <!-- 공용 충전기 설치장소 -->
           <template v-if="status === 'public-charger'">
-            <div class="layer-title-sub">차지비는 국내 전기차 충전 서비스 분야의 개척자로서,<br />완성차 제작사·정부·지자체 등과 다양한 프로젝트를 수행해왔습니다.</div>
+            <div class="layer-title-sub">설치 장소를 선택해주세요.</div>
             <div class="menu-list">
               <ul>
                 <li v-for="(item, index) in publicChargerList" :key="index"><button @click="status='apply-form'">{{ item.menu }}</button></li>
@@ -110,7 +119,7 @@
                       <div class="input auto">
                           <Input type="number" v-model="form.park" placeholder="주차면" />
                       </div>
-                      <button class="btn">최소필요댓수 계산</button>
+                      <button class="btn"><span class="pc-ver">최소필요댓수 </span>계산</button>
                       <div class="input auto">
                           <Input type="number" v-model="form.minCar" placeholder="최소필요댓수" />
                       </div>
@@ -380,6 +389,17 @@ export default {
           menu: '기타'
         }
       ],
+      homeChargerPlaceList: [
+        {
+          menu: '단독주택'
+        },
+        {
+          menu: '공동주택, 빌라'
+        },
+        {
+          menu: '기타'
+        }
+      ],
       placeList: [
         {
           title: '모델A',
@@ -417,7 +437,7 @@ export default {
   methods:{
     setSliderOpt(){
       if(document.body.clientWidth <= 960){
-        this.placeSlideOpt.perPage= 1.2
+        this.placeSlideOpt.perPage= 1
         this.placeSlideOpt.autoWidth = true
         this.placeSlideOpt.gap= 0
         //focus  : 'center',

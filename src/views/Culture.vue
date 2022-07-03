@@ -116,10 +116,10 @@
         </ul>
         <ul class="team-list mo-ver">
           <li><button @click="layerPop.PopTeamExecutives = true">EXECUTIVES</button></li>
-          <li><button @click="layerPop.PopTeamManagement = true">MANAGEMENT<br />SUPPORT DEP.</button></li>
-          <li><button @click="layerPop.PopTeamCneBusiness = true">CnE BUSINESS<br />DEP.</button></li>
-          <li><button @click="layerPop.PopTeamCneService = true">CnE SERVICE<br />DEP.</button></li>
-          <li><button @click="layerPop.PopTeamPlatform = true">PLATFORM<br />CENTOR</button></li>
+          <li><button @click="layerPop.PopTeamManagement = true">MANAGEMENT SUPPORT DEP.</button></li>
+          <li><button @click="layerPop.PopTeamCneBusiness = true">CnE BUSINESS DEP.</button></li>
+          <li><button @click="layerPop.PopTeamCneService = true">CnE SERVICE DEP.</button></li>
+          <li><button @click="layerPop.PopTeamPlatform = true">PLATFORM CENTOR</button></li>
         </ul>
         <div v-if="teamTab === 'executives'" class="team-detail">
           <h3 class="title-type2 line-t semi-bold">EXECUTIVES</h3>
@@ -160,7 +160,7 @@
             <p>
               지원서를 보내주시면 영업일 기준
               <br />3일 내로 검토 후 답장을 드립니다.
-              <br />- 지원: recruit@chargev.co.kr
+              <br />- 지원: <a href="mailto:recruit@chargev.co.kr">recruit@chargev.co.kr</a>
             </p>
           </li>
           <li>

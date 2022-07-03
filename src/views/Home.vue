@@ -42,6 +42,12 @@ export default {
     return {
       titleNum: 0,
       list: {
+          'title-sample': '-샘플',       
+          //샘플
+          'sample/component': '샘플/컴포넌트',
+          'sample/form': '샘플/폼요소',
+          
+          'title-page': '-페이지',
           // 로그인
           'login': '로그인',
           // 메인
@@ -56,6 +62,9 @@ export default {
           'disclosure': '공고',
           // 충전기 설치신청
           'charger-apply': '충전기 설치신청',
+          // 마이페이지
+          'mypage': '마이페이지(개인)',
+          'mypage-coper': '마이페이지(법인)',
       }
     }
   },

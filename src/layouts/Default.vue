@@ -3,7 +3,7 @@
         <Header />
         <slot />
         <Footer />
-        <button class="btn-scroll" @click="scrollBtm"><span>SCROLL</span></button>
+        <button v-if="scrollBtmShow" class="btn-scroll" @click="scrollBtm"><span>SCROLL</span></button>
     </div>
 </template>
 
@@ -15,5 +15,6 @@ export default {
         Header,
         Footer
     },
+
 }
 </script>

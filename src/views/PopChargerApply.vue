@@ -49,7 +49,7 @@
             <div class="qr-wrap pc-ver">
               <div class="qr"></div>
             </div>
-             <div class="menu-list">
+             <div class="menu-list mo-ver">
               <ul>
                 <li><button>모바일 앱 다운로드</button></li>
               </ul>
@@ -195,7 +195,7 @@
                       <template slot-scope="props">
                           <button class="place-card" @click="status='privacy-rule'">
                               <div class="img" :style="`background-image:url(${props.item.src})`"></div>
-                              <div class="desc type2">
+                              <div class="desc">
                                   <div class="tit">{{ props.item.title }}</div>
                                   <div class="price">{{ props.item.price }}</div>
                                   <div class="item">{{ props.item.item }}</div>
@@ -215,7 +215,7 @@
 
           <!-- 개인정보취급방침 -->
           <template v-if="status === 'privacy-rule'">
-            <div class="layer-title-sub">개인정보 취급방침에 대해 동의 후 신청하실 수 있습니다.</div>
+            <div class="layer-title-sub">개인정보 취급방침에 대해 동의 후 <br class="mo-ver" />신청하실 수 있습니다.</div>
             <div class="text-grid-list">
               <div class="row">
                 <strong>수집 주체</strong>
@@ -249,100 +249,24 @@
           <!-- 신청완료(홈) -->
           <template v-if="status === 'home-complete'">
             <div class="layer-title-sub">설치 신청이 완료되었습니다.</div>
-            <div class="text-grid-list">
-              <div class="row">
-                <strong>신청자</strong>
-                <div>김김김</div>
-              </div>
-              <div class="row">
-                <strong>휴대전화번호</strong>
-                <div>010-0000-0000</div>
-              </div>
-              <div class="row">
-                <strong>유선전화번호</strong>
-                <div>02-0000-0000</div>
-              </div>
-              <div class="row">
-                <strong>이메일</strong>
-                <div>CHARGEV@CHARGEV.CO.KR</div>
-              </div>
-              <div class="row">
-                <strong>주소</strong>
-                <div>서울시 송파구 올림픽로 300</div>
-              </div>
-              <div class="row">
-                <strong>신청수량</strong>
-                <div>1</div>
-              </div>
-              <div class="row">
-                <strong>요구사항</strong>
-                <div>빨리 와주세요.</div>
-              </div>
-              <div class="row">
-                <strong>설치신청모델</strong>
-                <div>모델A</div>
-              </div>
-            </div>
-            <div class="btn-wrap">
-              <button class="btn-type1" @click="$emit('close');">완료</button>
-            </div>
+            <ApplyComplete :type="type" @close="$emit('close');$emit('type', 'home')" />
           </template>
 
           <!-- 신청완료(공용) -->
           <template v-if="status === 'public-complete'">
             <div class="layer-title-sub">설치 신청이 완료되었습니다.</div>
-            <div class="text-grid-list">
-              <div class="row">
-                <strong>신청자</strong>
-                <div>김김김</div>
-              </div>
-              <div class="row">
-                <strong>휴대전화번호</strong>
-                <div>010-0000-0000</div>
-              </div>
-              <div class="row">
-                <strong>유선전화번호</strong>
-                <div>02-0000-0000</div>
-              </div>
-              <div class="row">
-                <strong>이메일</strong>
-                <div>CHARGEV@CHARGEV.CO.KR</div>
-              </div>
-              <div class="row">
-                <strong>주소</strong>
-                <div>서울시 송파구 올림픽로 300</div>
-              </div>
-              <div class="row">
-                <strong>주차면</strong>
-                <div>100  </div>
-              </div>
-              <div class="row">
-                <strong>최소필요댓수</strong>
-                <div>2</div>
-              </div>
-              <div class="row">
-                <strong>기존 수량</strong>
-                <div>0</div>
-              </div>
-              <div class="row">
-                <strong>설치 희망 수량</strong>
-                <div>2</div>
-              </div>
-              <div class="row">
-                <strong>요구사항</strong>
-                <div>빨리 와주세요</div>
-              </div>
-            </div>
-            <div class="btn-wrap">
-              <button class="btn-type1" @click="$emit('close');">완료</button>
-            </div>
+            <ApplyComplete :type="type" @close="$emit('close');$emit('type', 'public')" />
           </template>
       </template>
     </LayerPopup>
 </template>
 
 <script>
+import ApplyComplete from '@/views/common/ApplyComplete'
 export default {
+  components: {
+    ApplyComplete,
+  },
   props: {
     visible: {
       type: Boolean,
@@ -440,8 +364,6 @@ export default {
         this.placeSlideOpt.perPage= 1
         this.placeSlideOpt.autoWidth = true
         this.placeSlideOpt.gap= 0
-        //focus  : 'center',
-        //trimSpace: false,
       }else{
         this.placeSlideOpt.perPage= 3
         this.placeSlideOpt.autoWidth = false

@@ -2,6 +2,16 @@ import Vue from 'vue'
 import $ from 'jquery'
 
 Vue.mixin({
+   data(){
+      return{
+        scrollBtmShow: false, 
+      }
+    },
+    mounted(){
+      if(document.body.scrollHeight > window.innerHeight * 2) {
+        this.scrollBtmShow = true
+      }
+    },
     methods: {
       gnbMenu(){
         $('.header .menu.mo-ver').on('click', function(){
@@ -68,6 +78,13 @@ Vue.mixin({
           if(Array.isArray(this[arr]))  this.$set(this[arr], i, true)
           else this[arr] = true
         }
-      },      
+      },
+      sizeCheck(){
+        if(document.body.clientWidth <= 1023){
+          this.ver = 'mo'
+        }else{
+          this.ver = 'pc'
+        }
+      }
     }
   })

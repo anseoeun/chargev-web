@@ -6,6 +6,8 @@ Vue.use(VueRouter)
 const routes = [
   // 퍼블리싱 인덱스, 샘플
   { path: '/', meta: { layout: 'None' }, component: () => import('@/views/Home.vue')  },
+  { path: '/sample/component', meta: { layout: 'None' }, component: () => import('@/views/sample/Component.vue')  },
+  { path: '/sample/form', meta: { layout: 'None' }, component: () => import('@/views/sample/Form.vue')  },
 
   // 로그인
   { path: '/login', meta: {layout: 'Default'}, component: () => import('@/views/Login.vue')},
@@ -21,6 +23,9 @@ const routes = [
   { path: '/disclosure', meta: {layout: 'Default' }, component: () => import('@/views/Disclosure.vue')},
   // 충전기 설치신청
   { path: '/charger-apply', meta: {layout: 'Default' }, component: () => import('@/views/ChargerApply.vue')},
+  // 마이페이지
+  { path: '/mypage-coper', meta: {layout: 'Default', user:'coper' }, component: () => import('@/views/Mypage.vue')},
+  { path: '/mypage', meta: {layout: 'Default', user:'person' }, component: () => import('@/views/Mypage.vue')},
 ]
 
 for(let i=0;i<routes.length;i++){

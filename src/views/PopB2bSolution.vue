@@ -2,7 +2,7 @@
     <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-b2b-solution" >
       <template slot="content">
           <h2 class="layer-title">B2B SOLUTION</h2>
-          <div class="layer-title-sub"><em>고객 서비스 연계</em>와 <em>충전기 운영관리</em>를 위해 <em>충전기 구축과 운영이 반드시 함께 고려</em>되어야합니다.</div>
+          <div class="layer-title-sub"><em>고객 서비스 연계</em>와 <em>충전기 운영관리</em>를 <br class="mo-ver" />위해 <em>충전기 구축과 운영이 <br class="mo-ver" />반드시 함께 고려</em>되어야합니다.</div>
           <div class="text-type3">
             차지비는 수많은 파트너십을 통해 독자적인 설치 유형별 충전기 운영 관리 방안을 구축하여
             <br />충전기 도입에 필요한 요건들을 사전 검토하고 최적화된 카운셀링을 통하여

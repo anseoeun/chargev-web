@@ -2,7 +2,7 @@
   <div class="contents">
     <div class="login-wrap">
       <div class="inner-wrapper">
-        <button @click="status = prevStatus" class="btn-back"><Icon type="arr-back" />뒤로가기</button>
+        <button class="btn-back"><Icon type="arr-back" />뒤로가기</button>
         <div class="login-content">
           <!-- 로그인 -->
           <template v-if="status === 'login'">
@@ -271,7 +271,6 @@ export default {
 
   data(){
     return{
-      prevStatus: '',
       status: 'login',
       form:{
         file: ''
@@ -308,11 +307,7 @@ export default {
       }      
     }
   },
-  watch:{
-    status(val, prevVal){
-      this.prevStatus = prevVal
-    }
-  },
+
   methods: {
     setAllCheck(){
       let num = this.ruleChecked.length - 1;

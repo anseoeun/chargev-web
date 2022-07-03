@@ -1,5 +1,5 @@
 <template>
-    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-station-operation" >
+    <LayerPopup :visible="visible" @close="$emit('close');" class="layer-full-popup pop-platform" >
       <template slot="content">
           <h2 class="layer-title">PLATFORM</h2>
           <div class="text-type3">

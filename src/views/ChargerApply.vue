@@ -20,8 +20,8 @@
           </ol>
         </div>
         <div class="text-type3">
-            충전기 설치신청은 모바일 앱을 통해 간편회원가입 후 진행 가능합니다.
-            <br />앱을 다운로드 하지 않고 설치를 원할 경우 설치신청 버튼을 통해 접수해주세요.  
+            충전기 설치신청은 모바일 앱을 통해 <br class="mo-ver" />간편회원가입 후 진행 가능합니다.
+            <br />앱을 다운로드 하지 않고 설치를 원할 경우 <br class="mo-ver" />설치신청 버튼을 통해 접수해주세요.  
         </div>
         <div class="btn-more-wrap">
           <button class="btn-more">모바일 앱 다운로드<Icon type="arr-more" /></button>
@@ -39,8 +39,10 @@
       </div>
     </div>
     
-    <PopChargerApply :visible="layerPop.PopChargerApply" :status="status" @close="layerPop.PopChargerApply = false" />
-    <PopChargerApplyCheck :visible="layerPop.PopChargerApplyCheck" :status="status" @close="layerPop.PopChargerApplyCheck = false" />
+    <PopChargerApply :visible="layerPop.PopChargerApply" @close="layerPop.PopChargerApply = false"
+      @type="getType"
+     />
+    <PopChargerApplyCheck :visible="layerPop.PopChargerApplyCheck" :type="type" @close="layerPop.PopChargerApplyCheck = false" />
   </div>
 </template>
 
@@ -54,7 +56,7 @@ export default {
   },  
   data(){
     return {
-      status: '',
+      type: '',
       processStepList: [
         {
           order: '신청접수',
@@ -85,6 +87,11 @@ export default {
         PopChargerApply: false,
         PopChargerApplyCheck: false,
       }      
+    }
+  },
+  methods:{
+    getType(val){
+      this.type = val
     }
   }
 }

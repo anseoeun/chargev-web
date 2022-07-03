@@ -15,11 +15,11 @@
 
           3. 신주의 발행 가액 : 1주당 금 ￦260,668원(액면가액 ￦5,000원)
 
-          4. 주금납입일 : 2021년 01월 04일          
+          4. 주금납입일 : 2021년 01월 04일
         </pre>
         <div class="btn-more-wrap">
           <a href="/" class="btn-more">원문보기<Icon type="arr-more" /></a>
-        </div>         
+        </div>
       </div>
     </div>
   </div>

@@ -29,18 +29,20 @@
           <br />차지비는 아래의 파트너사와 함께합니다.        
       </div>
 
-      <h3 class="title-type2">PARTNERS</h3>
-      <ul class="partener-logos">
-          <li class="logo-bmw"><img :src="require('@/assets/images/logos/logo-bmw.svg')" alt="bmw"/></li>
-          <li class="logo-coupe"><img :src="require('@/assets/images/logos/logo-coupe.svg')" alt="coupe"/></li>
-          <li class="logo-benz"><img :src="require('@/assets/images/logos/logo-benz.svg')" alt="benz"/></li>
-          <li class="logo-polestar"><img :src="require('@/assets/images/logos/logo-polestar.svg')" alt="polestar"/></li>
-          <li class="logo-volvo"><img :src="require('@/assets/images/logos/logo-volvo.svg')" alt="volvo"/></li>
-          <li class="logo-jaguar"><img :src="require('@/assets/images/logos/logo-jaguar.svg')" alt="jaguar"/></li>
-          <li class="logo-land-rover"><img :src="require('@/assets/images/logos/logo-land-rover.svg')" alt="land-rover"/></li>
-      </ul>
-      <div class="btn-more-wrap">
-        <button class="btn-more" @click="layerPop.PopPartners = true">파트너십에 대해 알아보기<Icon type="arr-more" /></button>
+      <div class="partners-wrap">
+        <h3 class="title-type2">PARTNERS</h3>
+        <ul class="partener-logos">
+            <li class="logo-bmw"><img :src="require('@/assets/images/logos/logo-bmw.svg')" alt="bmw"/></li>
+            <li class="logo-coupe"><img :src="require('@/assets/images/logos/logo-coupe.svg')" alt="coupe"/></li>
+            <li class="logo-benz"><img :src="require('@/assets/images/logos/logo-benz.svg')" alt="benz"/></li>
+            <li class="logo-polestar"><img :src="require('@/assets/images/logos/logo-polestar.svg')" alt="polestar"/></li>
+            <li class="logo-volvo"><img :src="require('@/assets/images/logos/logo-volvo.svg')" alt="volvo"/></li>
+            <li class="logo-jaguar"><img :src="require('@/assets/images/logos/logo-jaguar.svg')" alt="jaguar"/></li>
+            <li class="logo-land-rover"><img :src="require('@/assets/images/logos/logo-land-rover.svg')" alt="land-rover"/></li>
+        </ul>
+        <div class="btn-more-wrap">
+          <button class="btn-more" @click="layerPop.PopPartners = true">파트너십에 대해 알아보기<Icon type="arr-more" /></button>
+        </div>
       </div>
 
       <h2 class="title-type1">미션과 비전</h2>
@@ -54,7 +56,7 @@
     <!-- section -->
     <div class="section" id="business">
       <h2 class="title-type1">사업</h2>
-      <h3 class="title-type2">B2B 솔루션과 B2C 홈충전기 설치 및 충전소 운영</h3>
+      <h3 class="title-type2">B2B 솔루션과 B2C 홈충전기 설치 및 <br class="mo-ver" />충전소 운영</h3>
       <div class="text-type1">
           ChargEV는 기업 및 단체를 대상으로 한 B2B 충전 솔루션과
           <br />개인 고객을 대상으로 B2C 홈충전기 설치 사업을 진행하고 있습니다.
@@ -154,7 +156,7 @@
         </li>                  
       </ul>
 
-      <div class="text-type2">자세한 내용은 회사소개서를 통해 확인 가능합니다.</div>
+      <div class="text-type2">자세한 내용은 회사소개서를 통해  <br class="mo-ver" />확인 가능합니다.</div>
       <div class="btn-more-wrap">
         <a href="/" class="btn-more">회사 소개서 다운로드<Icon type="arr-more" /></a>
       </div>      

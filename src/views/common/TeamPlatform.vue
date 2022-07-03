@@ -3,7 +3,7 @@
       <div class="text-detail">
         (부서설명내용이 필요합니다.)CHARGEV 의 충전매출을 담당하는 부서로서 상품의 기획, 운영을 담당하고 있습니다.
       </div>
-      <h2 class="title-type1">NOW RECRUITING</h2>
+      <h2 class="title-type1">NOW <br class="mo-ver">RECRUITING</h2>
       <ul class="noti-slide-list">
         <li v-for="(item, index) in notiList" :key="index">
           <button @click="toggleSlide($event, `#slide-noti-${index}`)"><Icon type="arr-noti" /><span class="tit">{{ item.tit }}</span></button>

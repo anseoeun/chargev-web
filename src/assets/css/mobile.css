@@ -157,8 +157,6 @@ i[class*=i-] svg{width: 100%; height: 100%;}
 .login-wrap .login-menu ul li ~ li{margin-top:0;margin-left:1.6rem;}
 .login-wrap .join-guide-txt{font-size:1.2rem;}
 .login-wrap .login-txt{margin-top:6.4rem;font-weight: 700; font-size: 1.4rem;width:auto;text-align:center;}
-  /* .login-wrap .qr-wrap{display:flex;flex-direction: column;justify-content:center;align-items:center;width:400px;height:392px;}
-.login-wrap .qr-wrap .qr{width:240px;height:240px;background:#C4C4C4;} */
 .login-wrap .btn-more-wrap{text-align:left;margin-top:2.4rem;}
 .login-wrap .grid-list-menu + .btn-more-wrap{margin-top:3rem;}
 

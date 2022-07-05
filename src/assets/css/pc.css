@@ -7,7 +7,7 @@
 =========================================== */
 * {margin: 0; padding: 0; border: none; word-break: break-all; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-overflow-scrolling: touch; -webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto; vertical-align: baseline; font-size: inherit; line-height: inherit; font-family: inherit; color: inherit; font-weight: inherit; letter-spacing: 0.1em; }
 *:before, *:after { box-sizing: border-box; -webkit-box-sizing: border-box; }
-body { line-height: 1.25; font-family: "Manrope", "Sans-serif"; -webkit-text-size-adjust: none; color: #515A6E; word-break: keep-all; word-wrap: break-word; color: #fff; font-weight: 400; }
+body { line-height: 1.25; font-family: "Montserrat", "Sans-serif"; -webkit-text-size-adjust: none; color: #515A6E; word-break: keep-all; word-wrap: break-word; color: #fff; font-weight: 400; }
 dl, ul, ol, menu, li { list-style: none; }
 p { margin: 0; }
 table { width: 100%; border-collapse: collapse; border-spacing: 0; }

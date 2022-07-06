@@ -11,16 +11,27 @@ Vue.mixin({
       if(document.body.scrollHeight > window.innerHeight * 2) {
         this.scrollBtmShow = true
       }
+      $(window).on('resize', function(){
+        if($(window).width() >= 1024 && $('.header').hasClass('on-mo')){
+          $('.header').removeClass('on-mo');
+          $('body').css('overflow', '');
+        }
+        if($(window).width() < 1024 && $('.header').hasClass('on-pc')){
+          $('.header').removeClass('on-pc');
+        }
+      }) 
+      
+      this.minBodyScroll();
     },
     methods: {
       gnbMenu(){
         $('.header .menu.mo-ver').on('click', function(){
           if($('.header').hasClass('on-mo')){
             $('.header').removeClass('on-mo');
-            $('body').attr('overflow', 'hidden');
+            $('body').css('overflow', '');
           }else{
             $('.header').addClass('on-mo');
-            $('body').attr('overflow', '');
+            $('body').css('overflow', 'hidden');            
           }
         });
         $('.header .menu.pc-ver').on('click', function(){
@@ -85,6 +96,17 @@ Vue.mixin({
         }else{
           this.ver = 'pc'
         }
-      }
+      },
+      minBodyScroll(){
+        var lastScrollLeft = 0;
+        $(window).scroll(function() {
+          var documentScrollLeft = $(document).scrollLeft();
+          $('.header').css('left', -documentScrollLeft)
+      
+          if (lastScrollLeft != documentScrollLeft) {
+            lastScrollLeft = documentScrollLeft;
+          }
+        });
+      }      
     }
   })

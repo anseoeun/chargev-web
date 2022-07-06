@@ -77,7 +77,7 @@ textarea {font-size: 1.6rem; padding-bottom:1rem; height: 3.2rem;}
 .inp-check + .inp-check{margin-left:3.4rem;}
 
 /* title */
-.title-type1{font-size:3rem;font-weight:800;letter-spacing: 0.3em;}
+.title-type1{font-size:3rem;font-weight:700;letter-spacing: 0.3em;}
 .title-type1 + .title-type2,
 .title-type1 + .title-type3{margin-top:1.6rem;}
 .title-type2{font-weight: 600; font-size: 1.6rem;}
